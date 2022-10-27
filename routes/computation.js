@@ -9,13 +9,14 @@ router.get('/',function(req,res,next) {
     {
         y=x;
     }
-    res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
+
+  res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
 })
 
 
 router.get(`/`,function(req,res,next){
-    res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
-    res.end();
+res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
+res.end();
 })
 
 module.exports = router;
