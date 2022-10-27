@@ -1,5 +1,4 @@
 var express = require('express');
-const { route } = require('./mydata');
 var router = express.Router();
 
 router.get('/',function(req,res,next) {
@@ -10,12 +9,12 @@ router.get('/',function(req,res,next) {
     {
         y=x;
     }
-    res.render('computation',{ title: `f(${y}) is ${Math.cos(y)}`});
-
+    res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
 })
 
+
 router.get(`/`,function(req,res,next){
-    res.render('computation', { title: `f(${y} is ${Math.cos(y)}`});
+    res.render('computation', { title: `f(${y}) is ${Math.cos(y)}` });
     res.end();
 })
 
